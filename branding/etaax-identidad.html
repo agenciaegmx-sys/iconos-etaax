@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETAAX — Carpeta de Identidad Gráfica</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0a0908;color:#f0ece4;font-family:'DM Sans',Arial,sans-serif;}
+
+/* PAGE LAYOUT */
+.page{width:100%;padding:60px 48px;border-bottom:1px solid #1e1c19;}
+.page-dark{background:#0a0908;}
+.page-mid{background:#141210;}
+.page-light{background:#f0ece4;}
+
+.section-tag{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#8ce4ee;margin-bottom:6px;}
+.section-title{font-size:28px;font-weight:500;color:#f0ece4;margin-bottom:32px;letter-spacing:-0.5px;}
+.section-title-dark{color:#0f0e0c;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+.grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;}
+
+/* LOGO SVG helpers */
+.logo-white .l-et,.logo-white .l-ax{fill:#f0ece4;}
+.logo-white .l-aa{fill:#8ce4ee;}
+.logo-white .l-hole{fill:#0f0e0c;}
+.logo-dark .l-et,.logo-dark .l-ax{fill:#0f0e0c;}
+.logo-dark .l-aa{fill:#247681;}
+.logo-dark .l-hole{fill:#f0ece4;}
+.logo-green .l-et,.logo-green .l-ax{fill:#0f0e0c;}
+.logo-green .l-aa{fill:#15383d;}
+.logo-green .l-hole{fill:#8ce4ee;}
+
+/* ── COVER ── */
+.cover{background:#0f0e0c;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:60px 48px;}
+.cover-top{display:flex;align-items:flex-start;justify-content:space-between;}
+.cover-center{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 0;}
+.cover-bottom{display:flex;align-items:flex-end;justify-content:space-between;}
+.cover-label{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#4a4844;}
+
+/* ── CARDS ── */
+.mockup-card{border-radius:12px;overflow:hidden;background:#1a1916;border:1px solid #2e2c29;}
+.mockup-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#4a4844;margin-bottom:10px;}
+
+/* ── BUSINESS CARD ── */
+.bcard{width:100%;aspect-ratio:1.75;border-radius:10px;overflow:hidden;position:relative;}
+.bcard-front{background:#0f0e0c;border:1px solid #2e2c29;display:flex;flex-direction:column;justify-content:space-between;padding:20px 22px;height:100%;}
+.bcard-back{background:#8ce4ee;display:flex;align-items:center;justify-content:center;height:100%;}
+
+/* ── PHONE ── */
+.phone-frame{width:200px;background:#0f0e0c;border-radius:32px;border:6px solid #1a1916;overflow:hidden;box-shadow:0 0 0 1px #2e2c29;}
+.phone-screen{background:#0f0e0c;padding:0;}
+.phone-notch{width:70px;height:22px;background:#0a0908;border-radius:0 0 14px 14px;margin:0 auto;}
+.status-bar{display:flex;justify-content:space-between;padding:4px 16px;font-size:8px;color:#4a4844;}
+
+/* ── STICKER ── */
+.sticker{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:3px solid;}
+
+/* ── TAG ── */
+.hangtag{width:90px;background:#f0ece4;border-radius:8px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;}
+.hangtag-hole{width:10px;height:10px;border-radius:50%;border:1.5px solid #ccc;background:transparent;margin-bottom:4px;}
+
+/* PALETTE SWATCH */
+.swatch{height:80px;border-radius:10px;display:flex;align-items:flex-end;padding:10px 12px;}
+.swatch-label{font-size:10px;font-weight:500;}
+.swatch-hex{font-size:9px;opacity:0.7;margin-top:2px;}
+
+/* TYPOGRAPHY */
+.type-sample{padding:24px 28px;background:#1a1916;border-radius:10px;border:1px solid #2e2c29;}
+
+/* ICON BADGE */
+.icon-badge{border-radius:16px;display:flex;align-items:center;justify-content:center;}
+
+svg{max-width:100%}#brand-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px}.brand-tile{padding:20px 12px;border:1px solid #7774;border-radius:12px;text-align:center}.brand-tile svg{width:40px;height:40px;display:block;margin:0 auto 16px}.brand-tile span{display:block;overflow-wrap:anywhere;font-size:10px;line-height:1.6;min-height:48px}.brand-tile a{display:inline-block;color:inherit;font-size:11px;margin-top:12px}#gallery-mode{margin-top:18px;padding:12px 18px;border:1px solid #8ce4ee;background:#191814;color:#f0ece4;border-radius:8px;cursor:pointer}.page-light svg{max-width:100%}@media(max-width:760px){.page,.cover{padding:32px 20px}.grid4,.grid3{grid-template-columns:repeat(2,1fr)}#brand-gallery{grid-template-columns:repeat(3,1fr)}}@media(max-width:500px){.grid2{grid-template-columns:1fr}#brand-gallery{grid-template-columns:repeat(2,1fr)}.cover-top,.cover-bottom{gap:12px;flex-wrap:wrap}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ══ PORTADA ══════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-label">Carpeta de Identidad Gráfica</div>
+    <div class="cover-label">v2.0 · Azul y terracota</div>
+  </div>
+
+  <div class="cover-center">
+    <div style="text-align:center">
+      <!-- LOGO PRINCIPAL GRANDE -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="420" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+      <div style="font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#4a4844;margin-top:16px">Plataforma operativa para bares y restaurantes</div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-label">etaax.com</div>
+    <div style="display:flex;gap:6px">
+      <div style="width:8px;height:8px;border-radius:50%;background:#8ce4ee"></div>
+      <div style="width:8px;height:8px;border-radius:50%;background:#fb9b6f"></div>
+      <div style="width:8px;height:8px;border-radius:50%;background:#f0ece4;opacity:0.3"></div>
+    </div>
+  </div>
+</div>
+
+<section class="page page-dark"><div class="section-tag">Sistema actualizado</div><h2 class="section-title">Azul de marca + terracota de interfaz</h2><p style="color:#b4aea3;line-height:1.8">Azul #8CE4EE: punto del logo y detalles de iconos. Terracota #FB9B6F: títulos, contornos y acciones. Crema #F0ECE4 y negro cálido #0F0E0C conservan la base.<br>Modo claro propuesto: carbón #191A17, azul #247681 y terracota #A85130. Estos tonos profundos mantienen la lectura sobre blanco.<br>Hover cian #B1F1F7; hover terracota #FFB18C. Tarjetas: elevación de 2 px y transición de 180 ms. Foco: contorno azul. Respetar prefers-reduced-motion.</p><p style="color:#b4aea3;line-height:1.8;margin-top:16px">Los colores de estado —éxito, error y advertencia— conservan significado propio. El logo adjunto se mantiene como fuente original. El isotipo incluido es una derivación de su «e» y círculo, pendiente de aprobación.</p><div class="grid2" style="margin-top:24px"><div style="background:#0f0e0c;padding:24px;border:1px solid #403d37;border-radius:12px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="760" height="200"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#F0ECE4" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#8CE4EE" />
+        </g>
+    </g>
+</svg></div><div style="background:#fff;padding:24px;border-radius:12px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="760" height="200"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg></div></div></section><!-- ══ 01 PALETA DE COLOR ══════════════════════════════════ -->
+<div class="page page-dark">
+  <div class="section-tag">01</div>
+  <div class="section-title">Paleta de color</div>
+
+  <div class="grid4" style="margin-bottom:24px">
+    <div>
+      <div class="mockup-label">Azul de marca</div>
+      <div class="swatch" style="background:#8ce4ee">
+        <div><div class="swatch-label" style="color:#15383d">Azul</div><div class="swatch-hex" style="color:#15383d">#8ce4ee</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup-label">Terracota UI</div>
+      <div class="swatch" style="background:#fb9b6f">
+        <div><div class="swatch-label" style="color:#492416">Terracota</div><div class="swatch-hex" style="color:#492416">#fb9b6f</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup-label">Crema / texto</div>
+      <div class="swatch" style="background:#f0ece4;border:1px solid #ddd">
+        <div><div class="swatch-label" style="color:#1a1916">Crema</div><div class="swatch-hex" style="color:#1a1916">#f0ece4</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup-label">Negro cálido</div>
+      <div class="swatch" style="background:#0f0e0c;border:1px solid #2e2c29">
+        <div><div class="swatch-label" style="color:#f0ece4">Negro</div><div class="swatch-hex" style="color:#7a7570">#0f0e0c</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid4">
+    <div>
+      <div class="mockup-label">Azul profundo</div>
+      <div class="swatch" style="background:#247681">
+        <div><div class="swatch-label" style="color:#8ce4ee">Azul claro UI</div><div class="swatch-hex" style="color:#8ce4ee">#247681</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup-label">Surface</div>
+      <div class="swatch" style="background:#1a1916;border:1px solid #2e2c29">
+        <div><div class="swatch-label" style="color:#f0ece4">Surface</div><div class="swatch-hex" style="color:#7a7570">#1a1916</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup-label">Texto muted</div>
+      <div class="swatch" style="background:#7a7570">
+        <div><div class="swatch-label" style="color:#f0ece4">Muted</div><div class="swatch-hex" style="color:#f0ece4">#7a7570</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup-label">Rojo error</div>
+      <div class="swatch" style="background:#e05a3a">
+        <div><div class="swatch-label" style="color:#4a1000">Rojo</div><div class="swatch-hex" style="color:#4a1000">#e05a3a</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 02 LOGO VARIANTES ══════════════════════════════════ -->
+<div class="page page-mid">
+  <div class="section-tag">02</div>
+  <div class="section-title">Logo · Variantes</div>
+
+  <div class="grid2" style="margin-bottom:24px">
+    <!-- SOBRE OSCURO -->
+    <div>
+      <div class="mockup-label">Principal · fondo oscuro</div>
+      <div style="background:#0f0e0c;border:1px solid #2e2c29;border-radius:12px;padding:40px;display:flex;align-items:center;justify-content:center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="220" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+      </div>
+    </div>
+    <!-- SOBRE VERDE -->
+    <div>
+      <div class="mockup-label">Principal · fondo verde</div>
+      <div style="background:#8ce4ee;border-radius:12px;padding:40px;display:flex;align-items:center;justify-content:center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="220" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <!-- SOBRE CLARO -->
+    <div>
+      <div class="mockup-label">Principal · fondo claro</div>
+      <div style="background:#f0ece4;border-radius:12px;padding:40px;display:flex;align-items:center;justify-content:center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="220" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+      </div>
+    </div>
+    <!-- ISOTIPO GRID -->
+    <div>
+      <div class="mockup-label">Isotipo "e" · variantes y tamaños</div>
+      <div style="background:#1a1916;border:1px solid #2e2c29;border-radius:12px;padding:24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <!-- oscuro -->
+        <svg width="72" height="72" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="16" fill="#0f0e0c"/>
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <!-- verde -->
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="#8ce4ee"/>
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#0f0e0c"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#8ce4ee"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <!-- claro -->
+        <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="12" fill="#f0ece4"/>
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#1a1916"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#f0ece4"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <!-- mini -->
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="10" fill="#0f0e0c"/>
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <!-- favicon -->
+        <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="8" fill="#0f0e0c"/>
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 03 TARJETAS DE PRESENTACIÓN ═══════════════════════ -->
+<div class="page page-dark">
+  <div class="section-tag">03</div>
+  <div class="section-title">Tarjeta de presentación</div>
+
+  <div class="grid2" style="gap:32px">
+    <!-- FRENTE -->
+    <div>
+      <div class="mockup-label">Frente</div>
+      <div style="aspect-ratio:1.75;background:#0f0e0c;border:1px solid #2e2c29;border-radius:14px;padding:28px 30px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
+        <!-- decoración -->
+        <div style="position:absolute;right:-20px;bottom:-20px;width:120px;height:120px;border-radius:50%;background:#8ce4ee;opacity:0.06"></div>
+        <div style="position:absolute;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#8ce4ee;opacity:0.08"></div>
+        <!-- logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="110" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+        <!-- info -->
+        <div>
+          <div style="font-size:13px;font-weight:500;color:#f0ece4;margin-bottom:3px">Tu Nombre</div>
+          <div style="font-size:10px;color:#8ce4ee;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Consultor F&B</div>
+          <div style="font-size:9px;color:#7a7570;line-height:1.8">
+            <div>hola@etaax.com</div>
+            <div>etaax.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVERSO -->
+    <div>
+      <div class="mockup-label">Reverso</div>
+      <div style="aspect-ratio:1.75;background:#8ce4ee;border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-30px;left:-30px;width:160px;height:160px;border-radius:50%;background:#f0ece4;opacity:0.06"></div>
+        <div style="position:absolute;bottom:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:#0f0e0c;opacity:0.08"></div>
+        <svg width="60" height="60" viewBox="0 0 64 64" fill="none">
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#0f0e0c"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#8ce4ee"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 04 STICKERS ═══════════════════════════════════════ -->
+<div class="page page-mid">
+  <div class="section-tag">04</div>
+  <div class="section-title">Stickers</div>
+
+  <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+
+    <!-- Circular oscuro -->
+    <div style="text-align:center">
+      <div class="mockup-label" style="margin-bottom:10px">Circular</div>
+      <div style="width:120px;height:120px;border-radius:50%;background:#0f0e0c;border:3px solid #8ce4ee;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px">
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:#8ce4ee">etaax.com</div>
+      </div>
+    </div>
+
+    <!-- Rectangular -->
+    <div style="text-align:center">
+      <div class="mockup-label" style="margin-bottom:10px">Rectangular</div>
+      <div style="background:#0f0e0c;border:2px solid #8ce4ee;border-radius:12px;padding:16px 24px;display:inline-flex;align-items:center;gap:12px">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="90" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Azul -->
+    <div style="text-align:center">
+      <div class="mockup-label" style="margin-bottom:10px">Azul</div>
+      <div style="width:100px;height:100px;border-radius:50%;background:#8ce4ee;display:flex;align-items:center;justify-content:center">
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#0f0e0c"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#8ce4ee"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Hexagonal -->
+    <div style="text-align:center">
+      <div class="mockup-label" style="margin-bottom:10px">Hexagonal</div>
+      <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
+        <polygon points="55,5 100,30 100,80 55,105 10,80 10,30" fill="#0f0e0c" stroke="#8ce4ee" stroke-width="2.5"/>
+        <path d="M28 55C28 44.5 36 36 48 36C60 36 67.5 44.5 67.5 54.5C67.5 56 67.3 57.5 67 59H36C37.5 64.5 41.5 68 47 68C51.5 68 55 66 57 63.5L65 67.5C61.5 73.5 54.5 77 46.5 77C34.5 77 28 68 28 55Z" fill="#f0ece4"/>
+        <path d="M36.5 52H58C56.5 47 52.5 44 46.5 44C40.5 44 37 47 36.5 52Z" fill="#0f0e0c"/>
+        <circle cx="67" cy="37" r="7" fill="#fb9b6f"/>
+      </svg>
+    </div>
+
+    <!-- Bandera -->
+    <div style="text-align:center">
+      <div class="mockup-label" style="margin-bottom:10px">Bandera</div>
+      <div style="background:#8ce4ee;padding:10px 20px;display:inline-flex;align-items:center;gap:10px;clip-path:polygon(0 0,100% 0,90% 50%,100% 100%,0 100%)">
+        <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+          <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#0f0e0c"/>
+          <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#8ce4ee"/>
+          <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+        </svg>
+        <span style="font-size:14px;font-weight:600;color:#0f0e0c;padding-right:10px">etaax</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 05 PLAYERA / MERCH ══════════════════════════════════ -->
+<div class="page page-dark">
+  <div class="section-tag">05</div>
+  <div class="section-title">Playera · Merch</div>
+
+  <div class="grid3">
+    <!-- Playera negra frente -->
+    <div>
+      <div class="mockup-label">Playera negra · frente</div>
+      <div style="background:#1a1916;border:1px solid #2e2c29;border-radius:14px;padding:24px;display:flex;align-items:center;justify-content:center;min-height:220px">
+        <div style="position:relative">
+          <!-- forma playera svg simplificada -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="160" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playera verde -->
+    <div>
+      <div class="mockup-label">Playera verde · frente</div>
+      <div style="background:#1a1916;border:1px solid #2e2c29;border-radius:14px;padding:24px;display:flex;align-items:center;justify-content:center;min-height:220px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="160" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+      </div>
+    </div>
+
+    <!-- Gorra -->
+    <div>
+      <div class="mockup-label">Gorra bordada</div>
+      <div style="background:#1a1916;border:1px solid #2e2c29;border-radius:14px;padding:24px;display:flex;align-items:center;justify-content:center;min-height:220px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="180" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 06 DIGITAL · APP & WEB ════════════════════════════ -->
+<div class="page page-mid">
+  <div class="section-tag">06</div>
+  <div class="section-title">Digital · App & Web</div>
+
+  <div class="grid2">
+    <!-- PHONE MOCKUP -->
+    <div>
+      <div class="mockup-label">App móvil</div>
+      <div style="display:flex;justify-content:center">
+        <div class="phone-frame" style="width:180px">
+          <div class="phone-notch"></div>
+          <div class="status-bar"><span>9:41</span><span>● ● ●</span></div>
+          <!-- splash screen -->
+          <div style="background:#0f0e0c;padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;min-height:300px;justify-content:center">
+            <svg width="60" height="60" viewBox="0 0 64 64" fill="none">
+              <rect width="64" height="64" rx="16" fill="#1a1916"/>
+              <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+              <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+              <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="90" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+            <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:#4a4844;margin-top:4px">Plataforma operativa</div>
+            <div style="width:32px;height:2px;background:#8ce4ee;border-radius:1px;margin-top:20px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMAIL SIGNATURE -->
+    <div>
+      <div class="mockup-label">Firma de email</div>
+      <div style="background:#f0ece4;border-radius:12px;padding:24px;border:1px solid #ddd">
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+            <rect width="64" height="64" rx="12" fill="#0f0e0c"/>
+            <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+            <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+            <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+          </svg>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:#1a1916">Tu Nombre</div>
+            <div style="font-size:11px;color:#8ce4ee;font-weight:500;margin-bottom:8px">Consultor F&B · ETAAX</div>
+            <div style="width:100%;height:1px;background:#e0e0e0;margin-bottom:8px"></div>
+            <div style="font-size:10px;color:#7a7570;line-height:1.8">
+              <div>📧 hola@etaax.com</div>
+              <div>🌐 etaax.com</div>
+              <div>📱 +52 (443) 000-0000</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding-top:12px;border-top:2px solid #8ce4ee;display:flex;align-items:center;gap:8px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="70" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+          <div style="font-size:9px;color:#9a9590">Plataforma operativa para bares y restaurantes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 07 PAPELERÍA ════════════════════════════════════════ -->
+<div class="page page-dark">
+  <div class="section-tag">07</div>
+  <div class="section-title">Papelería · Sobre y Membrete</div>
+
+  <div class="grid2">
+    <!-- SOBRE -->
+    <div>
+      <div class="mockup-label">Sobre</div>
+      <div style="background:#0f0e0c;border:1px solid #2e2c29;border-radius:10px;aspect-ratio:1.6;display:flex;flex-direction:column;justify-content:space-between;padding:20px 24px;position:relative;overflow:hidden">
+        <div style="position:absolute;bottom:0;right:0;width:0;height:0;border-left:120px solid transparent;border-bottom:80px solid #1a1916;opacity:0.5"></div>
+        <div style="position:absolute;bottom:0;left:0;width:0;height:0;border-right:120px solid transparent;border-bottom:80px solid #1a1916;opacity:0.5"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="80" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+        <div style="align-self:center">
+          <div style="width:80px;height:1px;background:#8ce4ee;margin:0 auto 6px"></div>
+          <div style="font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#4a4844;text-align:center">etaax.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEMBRETE / HOJA -->
+    <div>
+      <div class="mockup-label">Hoja membretada</div>
+      <div style="background:#f0ece4;border-radius:10px;padding:0;overflow:hidden;aspect-ratio:0.77;display:flex;flex-direction:column">
+        <!-- header verde -->
+        <div style="background:#8ce4ee;padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="3000 90000 248000 65000" width="80" height="auto"><defs><mask id="letter-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="256000" height="256000" style="mask-type:luminance"><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            <path d="M4,31C4,19.5 12.5,10.5 25,10.5C37.5,10.5 45.5,19.5 45.5,30.5C45.5,32 45.3,33.5 45,35L14,35C15.5,40.5 19.5,44 25,44C29.5,44 33,42 35,39.5L43.5,43.5C40,49.5 33,53 25,53C12.5,53 4,44 4,31Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M14.5,28L37,28C35.5,23 31.5,20 25.5,20C19.5,20 16,23 14.5,28Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M52,12L61,12L61,21L72,21L72,30L61,30L61,42C61,44.8 62.5,46 65,46L72,46L72,54.5L64.5,54.5C57,54.5 52,50.5 52,43L52,30L46,30L46,21L52,21L52,12Z" style="fill:white;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M78,41C78,34.5 83.5,30.5 92.5,29.5L104,28.5L104,27.5C104,23.5 101.5,21 97,21C93,21 90,23 89,26.5L80.5,24C82.5,17.5 89,13 97,13C107.5,13 113,18.5 113,28.5L113,54.5L104,54.5L104,51C102,53.5 98.5,55 94,55C85.5,55 78,50.5 78,41Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            <path d="M104,37L95.5,38C92.5,38.5 90.5,40 90.5,42.5C90.5,45 92.5,46.5 95.5,46.5C101,46.5 104,43.5 104,39L104,37Z" style="fill:black;fill-rule:nonzero" />
+        </g>
+        <path d="M126,41C126,34.5 131.5,30.5 140.5,29.5L152,28.5L152,27.5C152,23.5 149.5,21 145,21C141,21 138,23 137,26.5L128.5,24C130.5,17.5 137,13 145,13C155.5,13 161,18.5 161,28.5L161,54.5L152,54.5L152,51C150,53.5 146.5,55 142,55C133.5,55 126,50.5 126,41Z" style="fill:white;fill-rule:nonzero" />
+        <path d="M152,37L143.5,38C140.5,38.5 138.5,40 138.5,42.5C138.5,45 140.5,46.5 143.5,46.5C149,46.5 152,43.5 152,39L152,37Z" style="fill:black;fill-rule:nonzero" />
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            <path d="M168,13L179,13L190,30L201,13L212,13L196.5,34.5L213,54.5L202,54.5L190,38.5L178,54.5L167,54.5L183.5,34.5L168,13Z" style="fill:white;fill-rule:nonzero" />
+        </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:black;fill-rule:nonzero" />
+        </g>
+    </g>
+</mask></defs><rect x="0" y="0" width="256000" height="256000" fill="#191A17" mask="url(#letter-mask)" /><g transform="matrix(1172.115912,0,0,1172.115912,3418.038957,87250.941841)">
+        <g transform="matrix(1,0,0,1.05042,-2.857143,-0.529412)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-2.857143,0)">
+            </g>
+        <g transform="matrix(1,0,0,1,-3.571429,0)">
+            </g>
+        <g transform="matrix(1.086406,0,0,1.086406,70.712678,4.362883)">
+            <circle cx="45" cy="11" r="6" style="fill:#247681" />
+        </g>
+    </g>
+</svg>
+          <div style="font-size:8px;letter-spacing:1px;color:rgba(0,0,0,0.5)">etaax.com</div>
+        </div>
+        <!-- contenido simulado -->
+        <div style="flex:1;padding:16px 18px;display:flex;flex-direction:column;gap:8px">
+          <div style="width:60%;height:6px;background:#1a1916;border-radius:3px;opacity:0.2"></div>
+          <div style="width:40%;height:5px;background:#8ce4ee;border-radius:3px;opacity:0.4;margin-bottom:8px"></div>
+          <div style="width:100%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1"></div>
+          <div style="width:90%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1"></div>
+          <div style="width:95%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1"></div>
+          <div style="width:80%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1"></div>
+          <div style="width:85%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1;margin-bottom:8px"></div>
+          <div style="width:100%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1"></div>
+          <div style="width:70%;height:4px;background:#1a1916;border-radius:2px;opacity:0.1"></div>
+        </div>
+        <!-- footer -->
+        <div style="background:#0f0e0c;padding:8px 18px;display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:7px;letter-spacing:1px;color:#4a4844">etaax.com · hola@etaax.com</div>
+          <div style="width:6px;height:6px;border-radius:50%;background:#8ce4ee"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CIERRE ════════════════════════════════════════════ -->
+<div class="cover" style="min-height:50vh">
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+      <rect width="64" height="64" rx="16" fill="#1a1916"/>
+      <path d="M10 32C10 21.5 18 13 30 13C42 13 49.5 21.5 49.5 31.5C49.5 33 49.3 34.5 49 36H18C19.5 41.5 23.5 45 29 45C33.5 45 37 43 39 40.5L47 44.5C43.5 50.5 36.5 54 28.5 54C16.5 54 10 45 10 32Z" fill="#f0ece4"/>
+      <path d="M18.5 29H41C39.5 24 35.5 21 29.5 21C23.5 21 20 24 18.5 29Z" fill="#0f0e0c"/>
+      <circle cx="49" cy="14" r="7" fill="#fb9b6f"/>
+    </svg>
+    <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#4a4844">etaax.com</div>
+    <div style="font-size:12px;color:#8ce4ee;letter-spacing:1px">Plataforma operativa para bares y restaurantes</div>
+  </div>
+</div>
+
+<section class="page page-dark"><h2 class="section-title">Biblioteca completa de iconos</h2><p style="color:#b4aea3;line-height:1.7">Todas las familias y variantes creadas. La familia 2 · Redes es la seleccionada para organización; las familias 1 y 3 se conservan como propuestas. Iconos heredados de acceso y sucursales mantienen sus versiones originales de trazo.</p><button id="gallery-mode" type="button">Ver fondo claro</button><div id="brand-gallery"></div></section><script>const assets=[["acceso/claro/etaax-asesor.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 3h10a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H9l-5 3v-4a4 4 0 0 1-1-3V7a4 4 0 0 1 4-4Z\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"15\" cy=\"9\" r=\"2.3\"/></svg>\n"], ["acceso/claro/etaax-candado.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"5\" y=\"10\" width=\"14\" height=\"11\" rx=\"3\"/><path d=\"M8 10V7a4 4 0 0 1 8 0v3\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"15\" r=\"1.8\"/><path d=\"M12 15v3\" style=\"stroke:#247681\"/></svg>\n"], ["acceso/claro/etaax-flecha.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h18m-7-7 7 7-7 7\"/></svg>\n"], ["acceso/claro/etaax-ojo-oculto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 5.8A10 10 0 0 1 12 5c6.3 0 10 7 10 7a19 19 0 0 1-3.3 4.2M15.8 18.2A10 10 0 0 1 12 19c-6.3 0-10-7-10-7a19 19 0 0 1 3.3-4.2\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"m3 3 18 18\"/></svg>\n"], ["acceso/claro/etaax-ojo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 12s3.7-7 10-7 10 7 10 7-3.7 7-10 7S2 12 2 12Z\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"3\"/></svg>\n"], ["acceso/claro/etaax-usuario.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"6\" r=\"3.2\"/><path d=\"M4 21v-1a8 8 0 0 1 16 0v1\"/></svg>\n"], ["acceso/etaax-asesor.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 3h10a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H9l-5 3v-4a4 4 0 0 1-1-3V7a4 4 0 0 1 4-4Z\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"15\" cy=\"9\" r=\"2.3\"/></svg>\n"], ["acceso/etaax-candado.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"5\" y=\"10\" width=\"14\" height=\"11\" rx=\"3\"/><path d=\"M8 10V7a4 4 0 0 1 8 0v3\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"15\" r=\"1.8\"/><path d=\"M12 15v3\" style=\"stroke:#8CE4EE\"/></svg>\n"], ["acceso/etaax-flecha.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h18m-7-7 7 7-7 7\"/></svg>\n"], ["acceso/etaax-ojo-oculto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 5.8A10 10 0 0 1 12 5c6.3 0 10 7 10 7a19 19 0 0 1-3.3 4.2M15.8 18.2A10 10 0 0 1 12 19c-6.3 0-10-7-10-7a19 19 0 0 1 3.3-4.2\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"m3 3 18 18\"/></svg>\n"], ["acceso/etaax-ojo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 12s3.7-7 10-7 10 7 10 7-3.7 7-10 7S2 12 2 12Z\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"3\"/></svg>\n"], ["acceso/etaax-usuario.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"6\" r=\"3.2\"/><path d=\"M4 21v-1a8 8 0 0 1 16 0v1\"/></svg>\n"], ["catalogos/claro/etaax-clientes.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"3\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"8\" cy=\"9\" r=\"2\"/><path d=\"M4 16a4 4 0 0 1 8 0m3-7h4m-4 4h4\"/></svg>"], ["catalogos/claro/etaax-colaboradores.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#247681\" stroke=\"none\" cx=\"8\" cy=\"6\" r=\"3\"/><circle cx=\"17\" cy=\"7\" r=\"2.5\"/><path d=\"M2 21v-3a6 6 0 0 1 12 0v3m2-8a5 5 0 0 1 6 5v3\"/></svg>"], ["catalogos/claro/etaax-horarios.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"16\" height=\"16\" rx=\"3\"/><path d=\"M6 2v4m8-4v4M2 9h16\"/><circle stroke=\"#247681\" cx=\"17\" cy=\"17\" r=\"5\"/><path stroke=\"#247681\" d=\"M17 14v3l2 1\"/></svg>"], ["catalogos/claro/etaax-insumos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 7 9-4 9 4v13H3V7Zm0 0 9 4 9-4m-9 4v9\"/><path stroke=\"#247681\" d=\"m8 5 8 4v5\"/></svg>"], ["catalogos/claro/etaax-proveedores.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 5h13v14H2V5Zm13 6h4l3 5v3h-7M19 11v5h3\"/><circle cx=\"6\" cy=\"20\" r=\"2\"/><circle cx=\"18\" cy=\"20\" r=\"2\"/><path stroke=\"#247681\" d=\"M5 8h7v7H5V8Zm3.5 0v3\"/></svg>"], ["catalogos/claro/etaax-recetas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 4h15a3 3 0 0 1 3 3v14H6a3 3 0 0 1-3-3V4Zm0 13h18M7 4v13\"/><circle cx=\"14\" cy=\"10\" r=\"4\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"14\" cy=\"10\" r=\"1.5\"/></svg>"], ["catalogos/claro/etaax-sub-recetas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11h13a6.5 6.5 0 0 1-13 0ZM5 19h9M5 7h8\"/><path stroke=\"#247681\" d=\"M16 7h5V3m0 4-5-5\"/></svg>"], ["catalogos/oscuro/etaax-clientes.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"3\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"8\" cy=\"9\" r=\"2\"/><path d=\"M4 16a4 4 0 0 1 8 0m3-7h4m-4 4h4\"/></svg>"], ["catalogos/oscuro/etaax-colaboradores.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"8\" cy=\"6\" r=\"3\"/><circle cx=\"17\" cy=\"7\" r=\"2.5\"/><path d=\"M2 21v-3a6 6 0 0 1 12 0v3m2-8a5 5 0 0 1 6 5v3\"/></svg>"], ["catalogos/oscuro/etaax-horarios.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"16\" height=\"16\" rx=\"3\"/><path d=\"M6 2v4m8-4v4M2 9h16\"/><circle stroke=\"#8CE4EE\" cx=\"17\" cy=\"17\" r=\"5\"/><path stroke=\"#8CE4EE\" d=\"M17 14v3l2 1\"/></svg>"], ["catalogos/oscuro/etaax-insumos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 7 9-4 9 4v13H3V7Zm0 0 9 4 9-4m-9 4v9\"/><path stroke=\"#8CE4EE\" d=\"m8 5 8 4v5\"/></svg>"], ["catalogos/oscuro/etaax-proveedores.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 5h13v14H2V5Zm13 6h4l3 5v3h-7M19 11v5h3\"/><circle cx=\"6\" cy=\"20\" r=\"2\"/><circle cx=\"18\" cy=\"20\" r=\"2\"/><path stroke=\"#8CE4EE\" d=\"M5 8h7v7H5V8Zm3.5 0v3\"/></svg>"], ["catalogos/oscuro/etaax-recetas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 4h15a3 3 0 0 1 3 3v14H6a3 3 0 0 1-3-3V4Zm0 13h18M7 4v13\"/><circle cx=\"14\" cy=\"10\" r=\"4\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"14\" cy=\"10\" r=\"1.5\"/></svg>"], ["catalogos/oscuro/etaax-sub-recetas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11h13a6.5 6.5 0 0 1-13 0ZM5 19h9M5 7h8\"/><path stroke=\"#8CE4EE\" d=\"M16 7h5V3m0 4-5-5\"/></svg>"], ["financieros/claro/etaax-cuentas-bancarias.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m2 8 10-5 10 5H2Zm2 3v7m5-7v7m6-7v7m5-7v7M2 21h20\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"6\" r=\"1.3\"/><path stroke=\"#247681\" d=\"M7 21h10\"/></svg>"], ["financieros/claro/etaax-estadisticas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 3v19h20M6 18v-5h3v5H6Zm6 0V9h3v9h-3\"/><path stroke=\"#247681\" d=\"M18 18V4h3v14h-3\"/></svg>"], ["financieros/claro/etaax-gastos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10h18v11H3V10ZM5 10V5h14v5\"/><path stroke=\"#247681\" d=\"M12 2v12m-3-3 3 3 3-3\"/><circle cx=\"12\" cy=\"17\" r=\"2\"/></svg>"], ["financieros/claro/etaax-kpis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"13\" r=\"9\"/><circle cx=\"11\" cy=\"13\" r=\"5\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"11\" cy=\"13\" r=\"1.6\"/><path stroke=\"#247681\" d=\"m11 13 10-10m-4 0h4v4\"/></svg>"], ["financieros/claro/etaax-previsiones.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h19M6 17l5-6 4 2\"/><path stroke=\"#247681\" d=\"m15 13 2-3m2-2 3-4m-4 0h4v4\"/></svg>"], ["financieros/claro/etaax-resumen-resultados.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"3\"/><path d=\"M8 6h8M8 10h3m-3 4h3m-3 4h3\"/><path stroke=\"#247681\" d=\"M15 10h1m-1 4h1m-1 4h1\"/></svg>"], ["financieros/claro/etaax-ventas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10h18v11H3V10ZM5 10V5h14v5\"/><path stroke=\"#247681\" d=\"M12 14V2m-3 3 3-3 3 3\"/><circle cx=\"12\" cy=\"17\" r=\"2\"/></svg>"], ["financieros/oscuro/etaax-cuentas-bancarias.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m2 8 10-5 10 5H2Zm2 3v7m5-7v7m6-7v7m5-7v7M2 21h20\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"6\" r=\"1.3\"/><path stroke=\"#8CE4EE\" d=\"M7 21h10\"/></svg>"], ["financieros/oscuro/etaax-estadisticas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 3v19h20M6 18v-5h3v5H6Zm6 0V9h3v9h-3\"/><path stroke=\"#8CE4EE\" d=\"M18 18V4h3v14h-3\"/></svg>"], ["financieros/oscuro/etaax-gastos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10h18v11H3V10ZM5 10V5h14v5\"/><path stroke=\"#8CE4EE\" d=\"M12 2v12m-3-3 3 3 3-3\"/><circle cx=\"12\" cy=\"17\" r=\"2\"/></svg>"], ["financieros/oscuro/etaax-kpis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"13\" r=\"9\"/><circle cx=\"11\" cy=\"13\" r=\"5\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"11\" cy=\"13\" r=\"1.6\"/><path stroke=\"#8CE4EE\" d=\"m11 13 10-10m-4 0h4v4\"/></svg>"], ["financieros/oscuro/etaax-previsiones.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h19M6 17l5-6 4 2\"/><path stroke=\"#8CE4EE\" d=\"m15 13 2-3m2-2 3-4m-4 0h4v4\"/></svg>"], ["financieros/oscuro/etaax-resumen-resultados.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"3\"/><path d=\"M8 6h8M8 10h3m-3 4h3m-3 4h3\"/><path stroke=\"#8CE4EE\" d=\"M15 10h1m-1 4h1m-1 4h1\"/></svg>"], ["financieros/oscuro/etaax-ventas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10h18v11H3V10ZM5 10V5h14v5\"/><path stroke=\"#8CE4EE\" d=\"M12 14V2m-3 3 3-3 3 3\"/><circle cx=\"12\" cy=\"17\" r=\"2\"/></svg>"], ["header/claro/etaax-desplegar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg>"], ["header/claro/etaax-inicio.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 10 9-7 9 7v11H3V10Z\"/><path stroke=\"#247681\" d=\"M9 21v-7h6v7\"/></svg>"], ["header/claro/etaax-luna.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 16A8 8 0 0 1 8 4a9 9 0 1 0 10 12Z\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"17\" cy=\"5\" r=\"2\"/></svg>"], ["header/claro/etaax-sistema.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"3\"/><path d=\"M12 17v4m-5 1h10\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"17\" cy=\"7\" r=\"1.5\"/></svg>"], ["header/claro/etaax-sol.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5\"/></svg>"], ["header/oscuro/etaax-desplegar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg>"], ["header/oscuro/etaax-inicio.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 10 9-7 9 7v11H3V10Z\"/><path stroke=\"#8CE4EE\" d=\"M9 21v-7h6v7\"/></svg>"], ["header/oscuro/etaax-luna.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 16A8 8 0 0 1 8 4a9 9 0 1 0 10 12Z\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"17\" cy=\"5\" r=\"2\"/></svg>"], ["header/oscuro/etaax-sistema.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"3\"/><path d=\"M12 17v4m-5 1h10\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"17\" cy=\"7\" r=\"1.5\"/></svg>"], ["header/oscuro/etaax-sol.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5\"/></svg>"], ["modelos-negocio/claro/etaax-ambulante.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 14h15v6H3Zm9-6v6M2 8c1-7 19-7 20 0H2Z\"/><circle cx=\"6\" cy=\"21\" r=\"1.5\"/><circle cx=\"16\" cy=\"21\" r=\"1.5\"/><path stroke=\"#247681\" d=\"M8 8c0-5 8-5 8 0M6 17h8\"/></svg>\n"], ["modelos-negocio/claro/etaax-bar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 5 9 10 9-10H3Zm9 10v6m-4 1h8\"/><path stroke=\"#247681\" d=\"M7 9h10m-3 0 3-7\"/></svg>\n"], ["modelos-negocio/claro/etaax-bistro.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 11h14M8 11v10m8-10v10M2 13v7h3m17-7v7h-3\"/><path stroke=\"#247681\" d=\"M12 10V6m-2-3h4l-1 3h-2Z\"/></svg>\n"], ["modelos-negocio/claro/etaax-cafeteria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9h12v6a6 6 0 0 1-12 0V9Zm12 1h2a3 3 0 0 1 0 6h-2M3 22h15\"/><path stroke=\"#247681\" d=\"M8 6V3m4 3V2\"/></svg>\n"], ["modelos-negocio/claro/etaax-cantina.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3h4v5l2 3v10H3V11l2-3V3Zm0 0V2h4v1M15 12h6l-1 9h-4Z\"/><path stroke=\"#247681\" d=\"M3 15h8m5 1h4\"/></svg>\n"], ["modelos-negocio/claro/etaax-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m2 9 10-7 10 7M4 8v14h16V8M8 22v-9h8v9\"/><path stroke=\"#247681\" d=\"M9 17h6m-3-4v4\"/></svg>\n"], ["modelos-negocio/claro/etaax-cerveceria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9h12v12H4V9Zm12 2h3a3 3 0 0 1 0 6h-3M4 9c-4-4 2-8 5-5 3-4 8-1 7 5\"/><path stroke=\"#247681\" d=\"M8 12v6m4-6v6\"/></svg>\n"], ["modelos-negocio/claro/etaax-cocina-entrega.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7h14v15H3V7Zm4 0V5a3 3 0 0 1 6 0v2\"/><path stroke=\"#247681\" d=\"M10 14h12m-3-3 3 3-3 3\"/></svg>\n"], ["modelos-negocio/claro/etaax-fonda.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 11h16v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5ZM2 12h2m16 0h2M3 8h18m-12 0V6h6v2\"/><path stroke=\"#247681\" d=\"M9 3V1m6 2V1\"/></svg>\n"], ["modelos-negocio/claro/etaax-foodtruck.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 5h13v14H2V5Zm13 6h4l3 5v3h-7M19 11v5h3\"/><circle cx=\"6\" cy=\"20\" r=\"2\"/><circle cx=\"18\" cy=\"20\" r=\"2\"/><path stroke=\"#247681\" d=\"M5 8h7v6H5V8Zm0 3h7\"/></svg>\n"], ["modelos-negocio/claro/etaax-fuente-sodas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 8h12l-2 13H8L6 8Zm-1 0h14\"/><path stroke=\"#247681\" d=\"M13 8V3h6M8 12h8\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"11\" cy=\"16\" r=\"1\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"14\" cy=\"14.5\" r=\".8\"/></svg>\n"], ["modelos-negocio/claro/etaax-jugueria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9h11l-2 13H5L3 9Zm5 0V3h5\"/><circle stroke=\"#247681\" cx=\"18\" cy=\"8\" r=\"4\"/><path stroke=\"#247681\" d=\"M18 4v8m-4-4h8M4 14h9\"/></svg>\n"], ["modelos-negocio/claro/etaax-marisqueria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11c5-7 11-7 16 0-5 7-11 7-16 0Zm16 0 3-4v8l-3-4Z\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"7\" cy=\"10\" r=\"1.2\"/><path stroke=\"#247681\" d=\"M3 20c3-3 4 3 7 0s4 3 7 0 3 1 4 0\"/></svg>\n"], ["modelos-negocio/claro/etaax-neveria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 11 6 11 6-11H6Zm2 0a4 4 0 1 1 8 0\"/><path stroke=\"#247681\" d=\"M6 10C0 7 7 0 10 4c3-6 10 0 8 4 4 0 3 4 0 4\"/></svg>\n"], ["modelos-negocio/claro/etaax-panaderia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12c0-9 18-9 18 0v5a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-5Z\"/><path stroke=\"#247681\" d=\"m7 12 2-4m2 5 2-5m2 5 2-4\"/></svg>\n"], ["modelos-negocio/claro/etaax-pizzeria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 6c5-4 13-4 18 0l-9 16L3 6Zm2 3c4-3 10-3 14 0\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"10\" cy=\"11\" r=\"1.4\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"14\" cy=\"12\" r=\"1.2\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"16\" r=\"1\"/></svg>\n"], ["modelos-negocio/claro/etaax-reposteria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12h16v9H4Zm-2 10h20M4 15c2 3 4-3 6 0s4-3 6 0 3-1 4 0\"/><path stroke=\"#247681\" d=\"M8 12V8h8v4M12 8V4\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"2.5\" r=\"1.2\"/></svg>\n"], ["modelos-negocio/claro/etaax-restaurante-bar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"13\" r=\"5\"/><ellipse cx=\"2\" cy=\"5\" rx=\"1.3\" ry=\"2.8\"/><path d=\"M2 8v12m18-5v6m-3 1h6m-7-16 4 9 3-9h-7Z\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"8\" cy=\"13\" r=\"2\"/><path stroke=\"#247681\" d=\"M17 9h5\"/></svg>\n"], ["modelos-negocio/claro/etaax-rosticeria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 13h20M4 10v10m16-10v10M2 21h20M8 13c-3-8 8-9 9-3s-6 9-9 3Z\"/><path stroke=\"#247681\" d=\"m15 8 3-3m-1 1 2 1m-8 3 2 3\"/></svg>\n"], ["modelos-negocio/claro/etaax-taqueria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 18a10 10 0 0 1 20 0H2Zm3 3h14\"/><path stroke=\"#247681\" d=\"m6 14 2-2 2 1 2-2 2 2 2-1 2 2\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-ambulante.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 14h15v6H3Zm9-6v6M2 8c1-7 19-7 20 0H2Z\"/><circle cx=\"6\" cy=\"21\" r=\"1.5\"/><circle cx=\"16\" cy=\"21\" r=\"1.5\"/><path stroke=\"#8CE4EE\" d=\"M8 8c0-5 8-5 8 0M6 17h8\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-bar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 5 9 10 9-10H3Zm9 10v6m-4 1h8\"/><path stroke=\"#8CE4EE\" d=\"M7 9h10m-3 0 3-7\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-bistro.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 11h14M8 11v10m8-10v10M2 13v7h3m17-7v7h-3\"/><path stroke=\"#8CE4EE\" d=\"M12 10V6m-2-3h4l-1 3h-2Z\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-cafeteria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9h12v6a6 6 0 0 1-12 0V9Zm12 1h2a3 3 0 0 1 0 6h-2M3 22h15\"/><path stroke=\"#8CE4EE\" d=\"M8 6V3m4 3V2\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-cantina.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 3h4v5l2 3v10H3V11l2-3V3Zm0 0V2h4v1M15 12h6l-1 9h-4Z\"/><path stroke=\"#8CE4EE\" d=\"M3 15h8m5 1h4\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m2 9 10-7 10 7M4 8v14h16V8M8 22v-9h8v9\"/><path stroke=\"#8CE4EE\" d=\"M9 17h6m-3-4v4\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-cerveceria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9h12v12H4V9Zm12 2h3a3 3 0 0 1 0 6h-3M4 9c-4-4 2-8 5-5 3-4 8-1 7 5\"/><path stroke=\"#8CE4EE\" d=\"M8 12v6m4-6v6\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-cocina-entrega.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7h14v15H3V7Zm4 0V5a3 3 0 0 1 6 0v2\"/><path stroke=\"#8CE4EE\" d=\"M10 14h12m-3-3 3 3-3 3\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-fonda.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 11h16v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5ZM2 12h2m16 0h2M3 8h18m-12 0V6h6v2\"/><path stroke=\"#8CE4EE\" d=\"M9 3V1m6 2V1\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-foodtruck.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 5h13v14H2V5Zm13 6h4l3 5v3h-7M19 11v5h3\"/><circle cx=\"6\" cy=\"20\" r=\"2\"/><circle cx=\"18\" cy=\"20\" r=\"2\"/><path stroke=\"#8CE4EE\" d=\"M5 8h7v6H5V8Zm0 3h7\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-fuente-sodas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 8h12l-2 13H8L6 8Zm-1 0h14\"/><path stroke=\"#8CE4EE\" d=\"M13 8V3h6M8 12h8\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"11\" cy=\"16\" r=\"1\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"14\" cy=\"14.5\" r=\".8\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-jugueria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9h11l-2 13H5L3 9Zm5 0V3h5\"/><circle stroke=\"#8CE4EE\" cx=\"18\" cy=\"8\" r=\"4\"/><path stroke=\"#8CE4EE\" d=\"M18 4v8m-4-4h8M4 14h9\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-marisqueria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11c5-7 11-7 16 0-5 7-11 7-16 0Zm16 0 3-4v8l-3-4Z\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"7\" cy=\"10\" r=\"1.2\"/><path stroke=\"#8CE4EE\" d=\"M3 20c3-3 4 3 7 0s4 3 7 0 3 1 4 0\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-neveria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 11 6 11 6-11H6Zm2 0a4 4 0 1 1 8 0\"/><path stroke=\"#8CE4EE\" d=\"M6 10C0 7 7 0 10 4c3-6 10 0 8 4 4 0 3 4 0 4\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-panaderia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12c0-9 18-9 18 0v5a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-5Z\"/><path stroke=\"#8CE4EE\" d=\"m7 12 2-4m2 5 2-5m2 5 2-4\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-pizzeria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 6c5-4 13-4 18 0l-9 16L3 6Zm2 3c4-3 10-3 14 0\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"10\" cy=\"11\" r=\"1.4\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"14\" cy=\"12\" r=\"1.2\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"16\" r=\"1\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-reposteria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12h16v9H4Zm-2 10h20M4 15c2 3 4-3 6 0s4-3 6 0 3-1 4 0\"/><path stroke=\"#8CE4EE\" d=\"M8 12V8h8v4M12 8V4\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"2.5\" r=\"1.2\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-restaurante-bar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"13\" r=\"5\"/><ellipse cx=\"2\" cy=\"5\" rx=\"1.3\" ry=\"2.8\"/><path d=\"M2 8v12m18-5v6m-3 1h6m-7-16 4 9 3-9h-7Z\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"8\" cy=\"13\" r=\"2\"/><path stroke=\"#8CE4EE\" d=\"M17 9h5\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-rosticeria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 13h20M4 10v10m16-10v10M2 21h20M8 13c-3-8 8-9 9-3s-6 9-9 3Z\"/><path stroke=\"#8CE4EE\" d=\"m15 8 3-3m-1 1 2 1m-8 3 2 3\"/></svg>\n"], ["modelos-negocio/oscuro/etaax-taqueria.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 18a10 10 0 0 1 20 0H2Zm3 3h14\"/><path stroke=\"#8CE4EE\" d=\"m6 14 2-2 2 1 2-2 2 2 2-1 2 2\"/></svg>\n"], ["modulos/principales/claro/etaax-aprende-analiza.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5C8 2 4 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-2-1-6-2-10 1Zm0 0v16M5 8h4m-4 4h4\"/><path stroke=\"#247681\" d=\"M15 15v-3m3 3V8\"/></svg>"], ["modulos/principales/claro/etaax-control-administrativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"3\"/><path d=\"M8 2v4m8-4v4M3 9h18M7 13h3m-3 4h3\"/><path stroke=\"#247681\" d=\"m13 16 2 2 4-5\"/></svg>"], ["modulos/principales/claro/etaax-recetas-insumos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 3h11v17H5a3 3 0 0 1-3-3V3Zm0 13h11M6 7h3m-3 4h3M15 12l4-2 4 2v8l-4 2-4-2v-8Zm0 0 4 2 4-2\"/><path stroke=\"#247681\" d=\"M19 14v8\"/></svg>"], ["modulos/principales/claro/etaax-salud-financiera.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h19M6 17v-4m4 4V9m4 8V5\"/><path stroke=\"#247681\" d=\"M17 9h2l1-3 2 6\"/></svg>"], ["modulos/principales/oscuro/etaax-aprende-analiza.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5C8 2 4 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-2-1-6-2-10 1Zm0 0v16M5 8h4m-4 4h4\"/><path stroke=\"#8CE4EE\" d=\"M15 15v-3m3 3V8\"/></svg>"], ["modulos/principales/oscuro/etaax-control-administrativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"3\"/><path d=\"M8 2v4m8-4v4M3 9h18M7 13h3m-3 4h3\"/><path stroke=\"#8CE4EE\" d=\"m13 16 2 2 4-5\"/></svg>"], ["modulos/principales/oscuro/etaax-recetas-insumos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 3h11v17H5a3 3 0 0 1-3-3V3Zm0 13h11M6 7h3m-3 4h3M15 12l4-2 4 2v8l-4 2-4-2v-8Zm0 0 4 2 4-2\"/><path stroke=\"#8CE4EE\" d=\"M19 14v8\"/></svg>"], ["modulos/principales/oscuro/etaax-salud-financiera.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h19M6 17v-4m4 4V9m4 8V5\"/><path stroke=\"#8CE4EE\" d=\"M17 9h2l1-3 2 6\"/></svg>"], ["modulos/recetas-insumos/claro/etaax-escandallos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 4h16v18H4V4ZM9 4V2h6v2\"/><circle cx=\"12\" cy=\"11\" r=\"4\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"11\" r=\"1.5\"/><path stroke=\"#247681\" d=\"M8 18h3m3 0h2\"/></svg>"], ["modulos/recetas-insumos/claro/etaax-insumos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 7h16v15H4V7ZM7 7V4h10v3M8 17h8\"/><path stroke=\"#247681\" d=\"M12 13c-4 0-5-4-5-4s5 0 5 4Zm0 0c0-4 5-4 5-4s-1 4-5 4Z\"/></svg>"], ["modulos/recetas-insumos/claro/etaax-inventarios.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 2v20m20-20v20M2 11h20M2 21h20M5 11V4h5v7m4 0V4h5v7M5 21v-7h5v7m4 0v-7h5v7\"/><path stroke=\"#247681\" d=\"M6 7h3m6 10h3\"/></svg>"], ["modulos/recetas-insumos/claro/etaax-requisiciones.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 2h12l4 4v15H3V2Zm12 0v5h4M7 7h3m-3 4h6m-6 4h3\"/><path stroke=\"#247681\" d=\"M12 17h10m-3-3 3 3-3 3\"/></svg>"], ["modulos/recetas-insumos/oscuro/etaax-escandallos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 4h16v18H4V4ZM9 4V2h6v2\"/><circle cx=\"12\" cy=\"11\" r=\"4\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"11\" r=\"1.5\"/><path stroke=\"#8CE4EE\" d=\"M8 18h3m3 0h2\"/></svg>"], ["modulos/recetas-insumos/oscuro/etaax-insumos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 7h16v15H4V7ZM7 7V4h10v3M8 17h8\"/><path stroke=\"#8CE4EE\" d=\"M12 13c-4 0-5-4-5-4s5 0 5 4Zm0 0c0-4 5-4 5-4s-1 4-5 4Z\"/></svg>"], ["modulos/recetas-insumos/oscuro/etaax-inventarios.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 2v20m20-20v20M2 11h20M2 21h20M5 11V4h5v7m4 0V4h5v7M5 21v-7h5v7m4 0v-7h5v7\"/><path stroke=\"#8CE4EE\" d=\"M6 7h3m6 10h3\"/></svg>"], ["modulos/recetas-insumos/oscuro/etaax-requisiciones.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 2h12l4 4v15H3V2Zm12 0v5h4M7 7h3m-3 4h6m-6 4h3\"/><path stroke=\"#8CE4EE\" d=\"M12 17h10m-3-3 3 3-3 3\"/></svg>"], ["organizacion/claro/etaax-1-cadena.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 21V9h6v12H2Zm7 0V4h6v17H9Zm7 0V9h6v12h-6\"/><path stroke=\"#247681\" d=\"M4 13h2m5-5h2m5 5h2\"/></svg>"], ["organizacion/claro/etaax-1-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m2 9 10-7 10 7M4 8v14h16V8M8 22v-9h8v9\"/><path stroke=\"#247681\" d=\"M9 17h6m-3-4v4\"/></svg>"], ["organizacion/claro/etaax-1-corporativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 22V2h10v20M3 22h18M10 6h4m-4 4h4m-4 4h4\"/><path stroke=\"#247681\" d=\"M10 22v-4h4v4\"/></svg>"], ["organizacion/claro/etaax-1-franquicia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 21V9h18v12H3ZM2 9l3-5h14l3 5H2M8 21v-7h8v7\"/><circle stroke=\"#247681\" cx=\"12\" cy=\"6.5\" r=\"1.5\"/></svg>"], ["organizacion/claro/etaax-1-mixto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 21V10l5-4 5 4v11H2Zm10 0V3h10v18H12M16 7h2m-2 4h2m-2 4h2\"/><path stroke=\"#247681\" d=\"M6 21v-6h3v6\"/></svg>"], ["organizacion/claro/etaax-1-pyme.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V6l7-4 7 4v15H5ZM9 21v-6h6v6M9 8h1m4 0h1M9 11h1m4 0h1\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"5\" r=\"1.2\"/></svg>"], ["organizacion/claro/etaax-2-cadena.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"8\" width=\"5\" height=\"8\" rx=\"2\"/><rect x=\"9.5\" y=\"8\" width=\"5\" height=\"8\" rx=\"2\"/><rect x=\"17\" y=\"8\" width=\"5\" height=\"8\" rx=\"2\"/><path stroke=\"#247681\" d=\"M7 12h2.5m5 0H17\"/></svg>"], ["organizacion/claro/etaax-2-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\"2\"/><path stroke=\"#247681\" d=\"M12 8V2m-2 2 2-2 2 2M16 12h6m-2-2 2 2-2 2M12 16v6m-2-2 2 2 2-2M8 12H2m2-2-2 2 2 2\"/></svg>"], ["organizacion/claro/etaax-2-corporativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\"2\"/><path d=\"M12 8V3M8 12H3m13 0h5m-9 4v5\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"3\" r=\"2\"/><circle cx=\"3\" cy=\"12\" r=\"2\"/><circle cx=\"21\" cy=\"12\" r=\"2\"/><circle cx=\"12\" cy=\"21\" r=\"2\"/></svg>"], ["organizacion/claro/etaax-2-franquicia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle stroke=\"#247681\" cx=\"12\" cy=\"5\" r=\"3\"/><path d=\"M12 8v4H4m8 0h8M4 12v4m8-4v4m8-4v4\"/><rect x=\"2\" y=\"16\" width=\"4\" height=\"5\" rx=\"1\"/><rect x=\"10\" y=\"16\" width=\"4\" height=\"5\" rx=\"1\"/><rect x=\"18\" y=\"16\" width=\"4\" height=\"5\" rx=\"1\"/></svg>"], ["organizacion/claro/etaax-2-mixto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle stroke=\"#247681\" cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"m10 10-5-5m9 5 5-5m-9 9-5 5m9-5 5 5\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/><rect x=\"18\" y=\"2\" width=\"4\" height=\"4\" rx=\"1\"/><path d=\"m2 22 2-5 2 5H2\"/><rect x=\"18\" y=\"18\" width=\"4\" height=\"4\" rx=\"1\"/></svg>"], ["organizacion/claro/etaax-2-pyme.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"10\" r=\"5\"/><path d=\"M5 21v-2l4-5m10 7v-2l-4-5\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"10\" r=\"2\"/></svg>"], ["organizacion/claro/etaax-3-cadena.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"18\" rx=\"5\"/><path d=\"M6 8v8m6-8v8m6-8v8\"/><path stroke=\"#247681\" d=\"M6 12h12\"/></svg>"], ["organizacion/claro/etaax-3-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><path d=\"m6 9 6-3 6 3v7l-6 3-6-3V9Zm0 0 6 3 6-3m-6 3v7\"/><path stroke=\"#247681\" d=\"m9 7.5 6 3\"/></svg>"], ["organizacion/claro/etaax-3-corporativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 9 4v7c0 4-5 7-9 9-4-2-9-5-9-9V6Z\"/><path d=\"M8 16V8h8v8H8\"/><path stroke=\"#247681\" d=\"M11 11h2m-2 3h2\"/></svg>"], ["organizacion/claro/etaax-3-franquicia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 3 2 4 1 1 4 2 3-2 3-1 4-4 1-3 2-3-2-4-1-1-4-2-3 2-3 1-4 4-1Z\"/><path stroke=\"#247681\" d=\"m7 12 3 3 7-7\"/></svg>"], ["organizacion/claro/etaax-3-mixto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle stroke=\"#247681\" cx=\"8\" cy=\"8\" r=\"2\"/><rect x=\"13\" y=\"6\" width=\"4\" height=\"4\" rx=\"1\"/><path d=\"m6 17 2-4 2 4H6\"/><circle cx=\"15\" cy=\"15\" r=\"2\"/></svg>"], ["organizacion/claro/etaax-3-pyme.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"5\"/><path d=\"M7 17V9l5-3 5 3v8H7\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"11\" r=\"1.7\"/></svg>"], ["organizacion/oscuro/etaax-1-cadena.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 21V9h6v12H2Zm7 0V4h6v17H9Zm7 0V9h6v12h-6\"/><path stroke=\"#8CE4EE\" d=\"M4 13h2m5-5h2m5 5h2\"/></svg>"], ["organizacion/oscuro/etaax-1-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m2 9 10-7 10 7M4 8v14h16V8M8 22v-9h8v9\"/><path stroke=\"#8CE4EE\" d=\"M9 17h6m-3-4v4\"/></svg>"], ["organizacion/oscuro/etaax-1-corporativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 22V2h10v20M3 22h18M10 6h4m-4 4h4m-4 4h4\"/><path stroke=\"#8CE4EE\" d=\"M10 22v-4h4v4\"/></svg>"], ["organizacion/oscuro/etaax-1-franquicia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 21V9h18v12H3ZM2 9l3-5h14l3 5H2M8 21v-7h8v7\"/><circle stroke=\"#8CE4EE\" cx=\"12\" cy=\"6.5\" r=\"1.5\"/></svg>"], ["organizacion/oscuro/etaax-1-mixto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 21V10l5-4 5 4v11H2Zm10 0V3h10v18H12M16 7h2m-2 4h2m-2 4h2\"/><path stroke=\"#8CE4EE\" d=\"M6 21v-6h3v6\"/></svg>"], ["organizacion/oscuro/etaax-1-pyme.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V6l7-4 7 4v15H5ZM9 21v-6h6v6M9 8h1m4 0h1M9 11h1m4 0h1\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"5\" r=\"1.2\"/></svg>"], ["organizacion/oscuro/etaax-2-cadena.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"8\" width=\"5\" height=\"8\" rx=\"2\"/><rect x=\"9.5\" y=\"8\" width=\"5\" height=\"8\" rx=\"2\"/><rect x=\"17\" y=\"8\" width=\"5\" height=\"8\" rx=\"2\"/><path stroke=\"#8CE4EE\" d=\"M7 12h2.5m5 0H17\"/></svg>"], ["organizacion/oscuro/etaax-2-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\"2\"/><path stroke=\"#8CE4EE\" d=\"M12 8V2m-2 2 2-2 2 2M16 12h6m-2-2 2 2-2 2M12 16v6m-2-2 2 2 2-2M8 12H2m2-2-2 2 2 2\"/></svg>"], ["organizacion/oscuro/etaax-2-corporativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\"2\"/><path d=\"M12 8V3M8 12H3m13 0h5m-9 4v5\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"3\" r=\"2\"/><circle cx=\"3\" cy=\"12\" r=\"2\"/><circle cx=\"21\" cy=\"12\" r=\"2\"/><circle cx=\"12\" cy=\"21\" r=\"2\"/></svg>"], ["organizacion/oscuro/etaax-2-franquicia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle stroke=\"#8CE4EE\" cx=\"12\" cy=\"5\" r=\"3\"/><path d=\"M12 8v4H4m8 0h8M4 12v4m8-4v4m8-4v4\"/><rect x=\"2\" y=\"16\" width=\"4\" height=\"5\" rx=\"1\"/><rect x=\"10\" y=\"16\" width=\"4\" height=\"5\" rx=\"1\"/><rect x=\"18\" y=\"16\" width=\"4\" height=\"5\" rx=\"1\"/></svg>"], ["organizacion/oscuro/etaax-2-mixto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle stroke=\"#8CE4EE\" cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"m10 10-5-5m9 5 5-5m-9 9-5 5m9-5 5 5\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/><rect x=\"18\" y=\"2\" width=\"4\" height=\"4\" rx=\"1\"/><path d=\"m2 22 2-5 2 5H2\"/><rect x=\"18\" y=\"18\" width=\"4\" height=\"4\" rx=\"1\"/></svg>"], ["organizacion/oscuro/etaax-2-pyme.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"10\" r=\"5\"/><path d=\"M5 21v-2l4-5m10 7v-2l-4-5\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"10\" r=\"2\"/></svg>"], ["organizacion/oscuro/etaax-3-cadena.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"18\" rx=\"5\"/><path d=\"M6 8v8m6-8v8m6-8v8\"/><path stroke=\"#8CE4EE\" d=\"M6 12h12\"/></svg>"], ["organizacion/oscuro/etaax-3-cedis.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><path d=\"m6 9 6-3 6 3v7l-6 3-6-3V9Zm0 0 6 3 6-3m-6 3v7\"/><path stroke=\"#8CE4EE\" d=\"m9 7.5 6 3\"/></svg>"], ["organizacion/oscuro/etaax-3-corporativo.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 9 4v7c0 4-5 7-9 9-4-2-9-5-9-9V6Z\"/><path d=\"M8 16V8h8v8H8\"/><path stroke=\"#8CE4EE\" d=\"M11 11h2m-2 3h2\"/></svg>"], ["organizacion/oscuro/etaax-3-franquicia.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 3 2 4 1 1 4 2 3-2 3-1 4-4 1-3 2-3-2-4-1-1-4-2-3 2-3 1-4 4-1Z\"/><path stroke=\"#8CE4EE\" d=\"m7 12 3 3 7-7\"/></svg>"], ["organizacion/oscuro/etaax-3-mixto.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle stroke=\"#8CE4EE\" cx=\"8\" cy=\"8\" r=\"2\"/><rect x=\"13\" y=\"6\" width=\"4\" height=\"4\" rx=\"1\"/><path d=\"m6 17 2-4 2 4H6\"/><circle cx=\"15\" cy=\"15\" r=\"2\"/></svg>"], ["organizacion/oscuro/etaax-3-pyme.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"5\"/><path d=\"M7 17V9l5-3 5 3v8H7\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"11\" r=\"1.7\"/></svg>"], ["sucursales/claro/etaax-administrar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h18m-7-7 7 7-7 7\"/></svg>\n"], ["sucursales/claro/etaax-ajustes.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 3 1-1h4l1 3 2 1 3-1 2 4-2 2v2l2 2-2 4-3-1-2 1-1 3h-4l-1-3-2-1-3 1-2-4 2-2v-2L2 9l2-4 3 1 2-1Z\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"3\"/></svg>\n"], ["sucursales/claro/etaax-anadir-sucursal.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11v10h14M2 11l3-7h12l2 5M8 4l-1 7M3 11h8M7 21v-6h4\"/><path stroke=\"#247681\" d=\"M18 11v10m-5-5h10\"/></svg>\n"], ["sucursales/claro/etaax-catalogos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 18H3V3h14v2M8 21H6V6h14v2\"/><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path stroke=\"#247681\" d=\"M13 13h5\"/><path d=\"M13 17h5\"/></svg>\n"], ["sucursales/claro/etaax-cerrar-sesion.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 3H4v18h6M10 12h11m-4-4 4 4-4 4\"/></svg>\n"], ["sucursales/claro/etaax-finanzas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h19M7 17v-5m5 5V8\"/><path stroke=\"#247681\" d=\"M17 17V4\" style=\"stroke-width:3.4\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"17\" cy=\"4\" r=\"1.7\"/></svg>\n"], ["sucursales/claro/etaax-matriz.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12v9h17v-9M2 12l3-6h11l3 6H2M8 6l-1 6m6-6 1 6M6 16h3\"/><path stroke=\"#247681\" d=\"M12 21v-6h4v6M19 11V2h4l-1 2 1 2h-4\"/></svg>\n"], ["sucursales/claro/etaax-perfil.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"6\" r=\"3.2\"/><path d=\"M4 21v-1a8 8 0 0 1 16 0v1\"/></svg>\n"], ["sucursales/claro/etaax-privacidad.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 8 3v6c0 5-4 9-8 11-4-2-8-6-8-11V5Z\"/><rect stroke=\"#247681\" x=\"9\" y=\"10\" width=\"6\" height=\"6\" rx=\"1.4\"/><path stroke=\"#247681\" d=\"M10 10V8a2 2 0 0 1 4 0v2\"/></svg>\n"], ["sucursales/claro/etaax-restaurante.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle fill=\"#247681\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"2.6\"/><path d=\"M2 3v6m3-6v6M2 6h3M3.5 9v12M22 3c-2 2-2 5-2 8h2V3v18\"/></svg>\n"], ["sucursales/claro/etaax-sucursal.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#191A17\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 10v11h16V10M2 10l3-7h14l3 7H2M8 3l-1 7m9-7 1 7M4 15h4\"/><path stroke=\"#247681\" d=\"M12 21v-7h5v7\"/></svg>\n"], ["sucursales/etaax-administrar.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h18m-7-7 7 7-7 7\"/></svg>\n"], ["sucursales/etaax-ajustes.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 3 1-1h4l1 3 2 1 3-1 2 4-2 2v2l2 2-2 4-3-1-2 1-1 3h-4l-1-3-2-1-3 1-2-4 2-2v-2L2 9l2-4 3 1 2-1Z\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"3\"/></svg>\n"], ["sucursales/etaax-anadir-sucursal.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11v10h14M2 11l3-7h12l2 5M8 4l-1 7M3 11h8M7 21v-6h4\"/><path stroke=\"#8CE4EE\" d=\"M18 11v10m-5-5h10\"/></svg>\n"], ["sucursales/etaax-catalogos.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 18H3V3h14v2M8 21H6V6h14v2\"/><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path stroke=\"#8CE4EE\" d=\"M13 13h5\"/><path d=\"M13 17h5\"/></svg>\n"], ["sucursales/etaax-cerrar-sesion.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 3H4v18h6M10 12h11m-4-4 4 4-4 4\"/></svg>\n"], ["sucursales/etaax-finanzas.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v18h19M7 17v-5m5 5V8\"/><path stroke=\"#8CE4EE\" d=\"M17 17V4\" style=\"stroke-width:3.4\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"17\" cy=\"4\" r=\"1.7\"/></svg>\n"], ["sucursales/etaax-matriz.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12v9h17v-9M2 12l3-6h11l3 6H2M8 6l-1 6m6-6 1 6M6 16h3\"/><path stroke=\"#8CE4EE\" d=\"M12 21v-6h4v6M19 11V2h4l-1 2 1 2h-4\"/></svg>\n"], ["sucursales/etaax-perfil.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"6\" r=\"3.2\"/><path d=\"M4 21v-1a8 8 0 0 1 16 0v1\"/></svg>\n"], ["sucursales/etaax-privacidad.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 8 3v6c0 5-4 9-8 11-4-2-8-6-8-11V5Z\"/><rect stroke=\"#8CE4EE\" x=\"9\" y=\"10\" width=\"6\" height=\"6\" rx=\"1.4\"/><path stroke=\"#8CE4EE\" d=\"M10 10V8a2 2 0 0 1 4 0v2\"/></svg>\n"], ["sucursales/etaax-restaurante.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle fill=\"#8CE4EE\" stroke=\"none\" cx=\"12\" cy=\"12\" r=\"2.6\"/><path d=\"M2 3v6m3-6v6M2 6h3M3.5 9v12M22 3c-2 2-2 5-2 8h2V3v18\"/></svg>\n"], ["sucursales/etaax-sucursal.svg", "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"#F0ECE4\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 10v11h16V10M2 10l3-7h14l3 7H2M8 3l-1 7m9-7 1 7M4 15h4\"/><path stroke=\"#8CE4EE\" d=\"M12 21v-7h5v7\"/></svg>\n"]];let galleryLight=false;function draw(){const visible=assets.filter(([path])=>galleryLight?path.includes('claro/'):!path.includes('claro/'));document.getElementById('brand-gallery').innerHTML=visible.map(([path,svg])=>`<article class="brand-tile" style="background:${galleryLight?'#fff':'#191814'};color:${galleryLight?'#191A17':'#F0ECE4'}">${svg}<span>${path}</span><a href="iconos/${path}" download>Descargar SVG</a></article>`).join('');document.getElementById('gallery-mode').textContent=galleryLight?'Ver fondo oscuro':'Ver fondo claro'}document.getElementById('gallery-mode').addEventListener('click',()=>{galleryLight=!galleryLight;draw()});draw();</script></body>
+</html>
