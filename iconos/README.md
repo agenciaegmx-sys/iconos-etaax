@@ -11,3 +11,9 @@ Cada archivo conserva la versión de su propuesta HTML. Perfil/usuario y flecha/
 - El candado usa un detalle verde; el engranaje y el ojo usan un centro verde.
 
 Los archivos crema están pensados para fondos oscuros. No incluyen el logo de ETAAX.
+
+## Nóminas y autorización
+
+- [Nóminas](nominas/README.md): 27 iconos para pagos, periodos, conceptos y recibos.
+- [Autorización](autorizacion/README.md): 5 iconos para contraseña y confirmación.
+- [Galería con descarga individual](../etaax-nominas-iconos.html), temas claro y oscuro.
