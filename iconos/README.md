@@ -17,3 +17,9 @@ Los archivos crema están pensados para fondos oscuros. No incluyen el logo de E
 - [Nóminas](nominas/README.md): 27 iconos para pagos, periodos, conceptos y recibos.
 - [Autorización](autorizacion/README.md): 5 iconos para contraseña y confirmación.
 - [Galería con descarga individual](../etaax-nominas-iconos.html), temas claro y oscuro.
+
+## Gastos fijos y movimientos de caja
+
+- [Gastos fijos](gastos-fijos/README.md): 18 iconos para pagos, estados y periodos.
+- [Depósitos y retiros](movimientos-caja/README.md): 25 iconos de movimientos, fondos y captura.
+- [Galería con descarga individual](../etaax-fijos-movimientos-iconos.html), temas claro y oscuro.
