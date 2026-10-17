@@ -23,3 +23,11 @@ Los archivos crema están pensados para fondos oscuros. No incluyen el logo de E
 - [Gastos fijos](gastos-fijos/README.md): 18 iconos para pagos, estados y periodos.
 - [Depósitos y retiros](movimientos-caja/README.md): 25 iconos de movimientos, fondos y captura.
 - [Galería con descarga individual](../etaax-fijos-movimientos-iconos.html), temas claro y oscuro.
+
+## Caja fuerte, ventas, mayores y recordatorios
+
+- [Caja fuerte](caja-fuerte/README.md): 19 iconos de saldos y conciliación.
+- [Anticipos y ventas especiales](anticipos-ventas/README.md): 26 iconos.
+- [Gastos mayores](gastos-mayores/README.md): 15 iconos de acceso y listado.
+- [Recordatorios](recordatorios/README.md): 6 iconos.
+- [Galería y descargas](../etaax-operacion-administrativa-iconos.html), claro y oscuro.
