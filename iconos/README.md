@@ -31,3 +31,8 @@ Los archivos crema están pensados para fondos oscuros. No incluyen el logo de E
 - [Gastos mayores](gastos-mayores/README.md): 15 iconos de acceso y listado.
 - [Recordatorios](recordatorios/README.md): 6 iconos.
 - [Galería y descargas](../etaax-operacion-administrativa-iconos.html), claro y oscuro.
+
+## Staff operativo
+
+- [Colección](staff-operativo/README.md): 58 iconos para horarios, checklists, organigrama, perfiles de puesto y evaluaciones.
+- [Galería y descargas](../etaax-staff-operativo-iconos.html), claro y oscuro.
